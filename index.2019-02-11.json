@@ -1,0 +1,10 @@
+include:
+  - rippled.vl.nginx
+
+/srv/vl:
+  file.directory
+
+set_index_file:
+  file.managed:
+    - name: /srv/vl/index.json
+    - source: salt://rippled/vl/files/index.json
