@@ -1,0 +1,9 @@
+# Historical Validator Lists
+
+This repository tracks the recommended validator lists that Ripple has published on https://vl.ripple.com for the XRP Ledger Mainnet. The files follow the [Validator List format](https://xrpl.org/validator-list.html) version that was current at the time of publishing. Each file is named based on its publication date and contains a signature from Ripple's validator list signing key, `ED2677ABFFD1B33AC6FBC3062B71F1E8397C1505E1C42C64D11AD1B28FF73F4734`.
+
+Note that these lists do not strictly indicate which validators were trusted at a given time, but Ripple's recommended list acts as a point of reference for the servers that are most trusted within the network. Each server operator can change which servers they trust or which list(s) to follow. Doing so comes with a risk that scales with how much you change: if you diverge too much, you may fork off from partipants using different lists. (In typical conditions, 60% overlap is believed to be sufficient to avoid forking; in the worst case scenario, less than 90% could theoretically lead to a fork.)
+
+## Earlier History
+
+From the XRP Ledger's launch in late 2012 until about 2017, XRP Ledger servers did not have a function to follow a "recommended" list and instead had to be each configured with an explicit list of trusted validators (a UNL, or _unique node list_) in their config file. It is suspected that most servers at the time used [the default settings in Ripple's example config file](https://github.com/XRPLF/rippled/blob/bf116308d46793c6f7810c44ee79c80c5cfb1834/doc/validators-example.txt#L22-L27), which contained a pre-determined set of validators run by Ripple. Server operators could, and in some cases did, change their configurations to add or remove servers from their UNLs, but it is impossible to know exactly what UNL a server was using at any given time.
